@@ -12,4 +12,5 @@ Here are some of our motivations and goals we're keeping in mind as we develop t
 
 1. Be Bros
 2. Hold fast to Object-Oriented design tenets
-3. Design, complete, and publish a fully-fledged Android application to the Google Play Store
+3. Utilize Test-Driven Development to perfect our interfaces
+4. Design, complete, and publish a fully-fledged Android application to the Google Play Store

@@ -13,35 +13,38 @@ public class Coordinate {
     private int mCol;
 
     /**
-     * Coordinate defaults to "A1"
-     */
-    public Coordinate() {
-
-    }
-
-    /**
-     * Constructs a new Coordinate from a human-readable string representation (for example "B4" or "I8").
+     * Constructs a new {@code Coordinate} from a human-readable string representation (for example "B4" or "I8").
+     * Must be 2 characters long, with the first character being the row <i>as a letter</i> between 'A' and 'Z',
+     * and the second being the column <i>as a number</i> greater than or equal to 1.
      *
-     * @param strRep the string representation of the Coordinate. Must be 2 characters long, with the first
-     *               character being the row <i>as a letter</i>, and the second being the column <i>as a number</i>.
+     * @param strRep a valid string representation of the {@code Coordinate}.
+     * @throws IllegalArgumentException If {@code strRep} does not follow the rules listed above
      */
-    public Coordinate(String strRep) {
+    public Coordinate(String strRep) throws IllegalArgumentException {
 
     }
 
     /**
-     * Constructs a new Coordinate from a row (as a letter) and a column (as a number).
+     * Constructs a new {@code Coordinate} from a row (as a letter) and a column (as a number).
+     * Row must be between 'A' and 'Z', and column must be greater than or equal to 1.
+     *
      * @param rowLetter the Coordinate's row (as a letter)
      * @param colNumber the Coordinate's column (as a number)
+     * @throws IllegalArgumentException If {@code rowLetter} is not between 'A' and 'Z', or if
+     * {@code colNumber} is less than 1
      */
-    public Coordinate(char rowLetter, int colNumber) {
+    public Coordinate(char rowLetter, int colNumber) throws IllegalArgumentException {
 
     }
 
     /**
-     * Constructs a new Coordinate from a row and column (as numbers).
-     * @param rowNumber the Coordinate's row (as a number)
-     * @param colNumber the Coordinate's column (as a number)
+     * Constructs a new {@code Coordinate} from a row and column (as numbers).
+     * Row must be between 1 and 26, and column must be greater than or equal to 1.
+     *
+     * @param rowNumber the {@code Coordinate}'s row (as a number)
+     * @param colNumber the {@code Coordinate}'s column (as a number)
+     * @throws IllegalArgumentException If {@code rowNumber} is not between 1 and 26, or if
+     * {@code colNumber} is less than 1
      */
     public Coordinate(int rowNumber, int colNumber) {
 
@@ -49,17 +52,23 @@ public class Coordinate {
 
     /**
      * Converts a row number to the letter of that row. 1 maps to 'A', 2 maps to 'B', etc.
-     * @param num a positive integer that represents the row number
-     * @return the row letter that corresponds to {@code num}.
+     * If num is not between 1 and 26, returns 0.
+     *
+     * @param num an integer between 1 and 26 that represents the row number
+     * @return If {@code num} is between 1 and 26, then returns the row letter that corresponds to {@code num}.
+     * Else returns 0.
      */
     public static char numToLetter(int num) {
-        return '?';
+        return 0;
     }
 
     /**
      * Converts a row letter to the number of that row. 'A' maps to 1, 'B' maps to 2, etc.
+     * If letter is not between 'A' and 'Z', returns -1.
+     *
      * @param letter an uppercase character that represents the row letter
-     * @return the row number represented by {@code letter}.
+     * @return If {@code letter} is between 'A' and 'Z', returns the row number represented by {@code letter}.
+     * Else returns -1.
      */
     public static int letterToNum(char letter) {
         return 0;
@@ -70,7 +79,7 @@ public class Coordinate {
     }
 
     public char getRowLetter() {
-        return '?';
+        return 0;
     }
 
     public int getCol() {

@@ -52,7 +52,7 @@ public class Coordinate {
      * @param num a positive integer that represents the row number
      * @return the row letter that corresponds to {@code num}.
      */
-    public char numToLetter(int num) {
+    public static char numToLetter(int num) {
         return '?';
     }
 
@@ -61,7 +61,7 @@ public class Coordinate {
      * @param letter an uppercase character that represents the row letter
      * @return the row number represented by {@code letter}.
      */
-    public int letterToNum(char letter) {
+    public static int letterToNum(char letter) {
         return 0;
     }
 

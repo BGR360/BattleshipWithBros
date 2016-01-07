@@ -11,26 +11,6 @@ import static org.testng.Assert.*;
 public class CoordinateTest {
 
     @Test
-    public void testDefaultConstruct() throws Exception {
-
-    }
-
-    @Test
-    public void testStringConstruct() throws Exception {
-
-    }
-
-    @Test
-    public void testLetterNumConstruct() throws Exception {
-
-    }
-
-    @Test
-    public void testNumNumConstruct() throws Exception {
-
-    }
-
-    @Test
     public void testNumToLetter() throws Exception {
 
     }
@@ -47,6 +27,26 @@ public class CoordinateTest {
 
     @Test
     public void testEquals() throws Exception {
+
+    }
+
+    @Test
+    public void testDefaultConstruct() throws Exception {
+
+    }
+
+    @Test
+    public void testStringConstruct() throws Exception {
+
+    }
+
+    @Test
+    public void testLetterNumConstruct() throws Exception {
+
+    }
+
+    @Test
+    public void testNumNumConstruct() throws Exception {
 
     }
 }
